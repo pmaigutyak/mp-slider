@@ -1,6 +1,0 @@
-include README.md
-include LICENSE
-include requirements.txt
-recursive-include slider/locale *
-recursive-include slider/templates *
-prune *.pyc
