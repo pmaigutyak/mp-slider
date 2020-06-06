@@ -25,5 +25,6 @@ def render_slideshow(images, preview_size=None):
 @register.inclusion_tag('slideshow_js.html', name='slideshow_js')
 def render_slideshow_js(group_name='slideshow'):
     return {
+        'STATIC_URL': settings.STATIC_URL,
         'group_name': group_name
     }
