@@ -14,17 +14,10 @@ def render_slider():
 
 
 @register.inclusion_tag('slideshow.html')
-def render_slideshow(images, preview_size=None):
+def render_slideshow(images, group_name='slideshow', preview_size=None):
     return {
         'MEDIA_URL': settings.MEDIA_URL,
         'images': images,
-        'preview_size': preview_size
-    }
-
-
-@register.inclusion_tag('slideshow_js.html', name='slideshow_js')
-def render_slideshow_js(group_name='slideshow'):
-    return {
-        'STATIC_URL': settings.STATIC_URL,
+        'preview_size': preview_size,
         'group_name': group_name
     }
